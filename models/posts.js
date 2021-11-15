@@ -12,4 +12,4 @@ const postSchema = new mongoose.Schema({
     likes: [likesSchema]
 })
 
-module.exports = mongoose.models('Post', postSchema)
+module.exports = mongoose.model('Post', postSchema)
