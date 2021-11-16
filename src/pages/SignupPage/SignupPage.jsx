@@ -1,30 +1,30 @@
 import React, {useState} from 'react';
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
-import userService from '../../utils/userService'
-import { useNavigate } from 'react-router-dom';
+import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react';
+import userService from '../../utils/userService';
+import { useNavigate, Link } from 'react-router-dom';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 
 
 export default function SignUpPage(props) {
 
 const navigate = useNavigate();  
-const [error, setError] = useState('')
-const[selectedFile, setSelectedFile] = useState('')
+const [error, setError] = useState('');
+const[selectedFile, setSelectedFile] = useState('');
 const [state, setState] = useState({
   username: '',
   email: '',
   password: '',
   passwordConf: '',
   bio: '',
-})
+});
 
   function handleChange(e){
-    let name = e.target.name
-    let value = e.target.value
+    const name = e.target.name
+    const value = e.target.value
     setState({
       ...state,
       [name]: value
-    })
+    });
   }
 
   async function handleSubmit(e){
@@ -112,6 +112,9 @@ const [state, setState] = useState({
             </Segment>
             {error ? <ErrorMessage error={error} /> : null}
           </Form>
+          <Message>
+            Already have an account? <Link to="/login">Login</Link>
+          </Message>
         </Grid.Column>
       </Grid>
     </>
