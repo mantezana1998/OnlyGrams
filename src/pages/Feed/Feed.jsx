@@ -6,8 +6,8 @@ import * as postsApi from '../../utils/postApi'
 export default function Feed(props){  
     
     const [posts, setPosts] = useState([]);
-    // const [error, setError] = useState('');
-    // const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(true);
 
     async function handleAddPost(post){
         console.log(post, '<- postsssssss')
