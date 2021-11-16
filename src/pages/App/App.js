@@ -22,10 +22,12 @@ function App() {
 
   return (
       <Routes>
-          <Route path='/' element={<Layout user={user} handleLogout={handleLogout}/>} />
-          <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
-          
-          <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
+          <Route path='/' element={<Layout user={user} handleLogout={handleLogout}/>}>
+            <Route index element={<Feed />} />
+            <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
+            
+            <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
+          </Route>
       </Routes>
   );
 }
