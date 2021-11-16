@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import PostForm from '../../components/PostForm/PostForm';
 import PostFeed from '../../components/PostFeed/PostFeed';
 import * as postsApi from '../../utils/postApi'
+
+import { Grid } from "semantic-ui-react";
 
 export default function Feed(props){  
     
@@ -16,10 +18,37 @@ export default function Feed(props){
         setPosts(posts => [data.post, ...posts])
       }
     
+    async function getPosts(){
+        try{
+            const data = await postsApi.getAll();
+            setPosts([
+                ...data.posts
+            ])
+        }catch(err){
+            setError(err.message);
+            console.log(err, '<--- Error')
+        }
+    }
+
+    useEffect(() => {
+        getPosts();
+    }, []);
+
     return (
-        <>
-        <PostForm handleAddPost={handleAddPost} />
-        <PostFeed />
-        </>
-    )
+        <Grid centered>
+          <Grid.Row>
+            <Grid.Column style={{ maxWidth: 450 }}>
+              <PostForm handleAddPost={handleAddPost} />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column style={{ maxWidth: 450 }}>
+              <PostFeed
+                posts={posts}
+                user={props.user}
+              />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      );
 }
