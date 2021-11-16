@@ -7,6 +7,7 @@ const BUCKET_NAME = process.env.BUCKET_NAME
 
 module.exports = {
     create,
+    index
 }
 
 function create(req, res) {
@@ -36,4 +37,13 @@ function create(req, res) {
     // make sure you refer to the Post model to see what properties the schema needs
   
     // respond back to the client with the create post
+  }
+
+  async function index(req, res){
+    try{
+      const posts = await Post.find({}).populate('user').exec();
+      res.status(200).json({posts: posts})
+    }catch(err){
+      res.status(400).json({err})
+    }
   }

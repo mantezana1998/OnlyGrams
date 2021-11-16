@@ -10,7 +10,7 @@ export default function PostCard({post, user, isProfile}){
           ) : (
             <Card.Content textAlign="left">
               <Card.Header>
-                <Link to={`/${post.user.username}`}>
+                {/* <Link to={`/${post.user.username}`}> */}
                   <Image
                     size="large"
                     avatar
@@ -21,7 +21,7 @@ export default function PostCard({post, user, isProfile}){
                     }
                   />
                   {post.user.username}
-                </Link>
+                {/* </Link> */}
               </Card.Header>
             </Card.Content>
           )}

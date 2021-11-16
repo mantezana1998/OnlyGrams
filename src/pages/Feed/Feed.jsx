@@ -46,6 +46,7 @@ export default function Feed(props){
               <PostFeed
                 posts={posts}
                 user={props.user}
+                isProfile={false}
               />
             </Grid.Column>
           </Grid.Row>
