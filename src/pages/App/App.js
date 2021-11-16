@@ -15,9 +15,14 @@ function App() {
     setUser(userService.getUser())
   }
 
+  function handleLogout(){
+    userService.logout();
+    setUser(null)
+  }
+
   return (
       <Routes>
-          <Route path='/' element={<Layout user={user} handleSignUpOrLogin={handleSignUpOrLogin}/>} />
+          <Route path='/' element={<Layout user={user} handleLogout={handleLogout}/>} />
           <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
           
           <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />

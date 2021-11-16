@@ -7,7 +7,7 @@ export default function Layout({user, handleLogout}) {
     <Grid>
       <Grid.Row>
         <Grid.Column>
-          <Header user={user}/>
+          <Header user={user} handleLogout={handleLogout}/>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
