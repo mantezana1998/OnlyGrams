@@ -74,8 +74,8 @@ export default function ProfilePage(props) {
             posts={posts}
             numPhotosCol={3}
             user={props.user}
-			like={like}
-			unlike={unlike}
+            like={like}
+            unlike={unlike}
           />
         </Grid.Column>
       </Grid.Row>

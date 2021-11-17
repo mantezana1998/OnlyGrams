@@ -7,6 +7,7 @@ import userService from '../../utils/userService'
 import Layout from '../Layout/Layout'
 import Feed from '../Feed/Feed'
 import ProfilePage from "../ProfilePage/ProfilePage";
+import Products from '../Products/Products'
 
 function App() {
   console.log(userService)
@@ -28,7 +29,8 @@ function App() {
             <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
             
             <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
-            <Route path='/:username' element={<ProfilePage user={user} />} />
+            <Route path='/:username' element={<ProfilePage />} />
+            <Route path='/products' element={<Products />} />
           </Route>
       </Routes>
   );
