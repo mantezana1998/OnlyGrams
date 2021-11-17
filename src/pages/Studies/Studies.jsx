@@ -3,7 +3,7 @@ import { Card, Icon, Image, Grid } from 'semantic-ui-react'
 
 const src = '/images/wireframe/white-image.png'
 
-function Products(props){
+function Studies(props){
     const colorArray = ['orange', 
     'yellow', 
     'olive', 
@@ -18,19 +18,19 @@ function Products(props){
     return (
         
         <Card.Group itemsPerRow={4}> 
-        {props.data && props.data.map((product, i) => {
+        {props.studies && props.studies.map((studies, i) => {
                 return(
                 <Card 
                 color={colorArray[i]} 
-                image={product.image}
-                header={product.name}
-                meta={product.type}
-                description={product.description}
-                extra={product.thc}
+                // image={studies.image}
+                header={studies.name}
+                // meta={studies.type}
+                description={studies.keyFindings}
+                // extra={studies.thc}
                 />
             )})}
         </Card.Group> 
     
     )
 }
-export default Products
+export default Studies
