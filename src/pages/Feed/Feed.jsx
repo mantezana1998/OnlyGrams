@@ -66,6 +66,9 @@ export default function Feed(props){
                 posts={posts}
                 user={props.user}
                 isProfile={false}
+                numPhotosCol={1}
+                like={like}
+                unlike={unlike}
               />
             </Grid.Column>
           </Grid.Row>

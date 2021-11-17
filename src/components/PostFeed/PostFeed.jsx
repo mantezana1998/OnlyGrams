@@ -2,7 +2,13 @@ import React from "react";
 import { Card, Loader, Dimmer, Segment, Image } from "semantic-ui-react";
 import PostCard from "../PostCard/PostCard";
 
-export default function PostFeed({ posts, user, isProfile }) {
+export default function PostFeed({ 
+  posts, 
+  user, 
+  isProfile,
+  like,
+  unlike
+}) {
   return (
     <Card.Group>
       <Segment>
@@ -15,6 +21,8 @@ export default function PostFeed({ posts, user, isProfile }) {
             key={post._id}
             user={user}
             isProfile={isProfile}
+            like={like}
+            unlike={unlike}
           />
         );
       })}
