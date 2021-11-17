@@ -6,7 +6,7 @@ export function create(id){
     return fetch(`${BASE_URL}posts/${id}/likes`, {
         method: "POST",
         headers: {
-            Authoriziation: "Bearer" + tokenService.getToken(),
+            Authorization: "Bearer " + tokenService.getToken(),
         },
     }).then((res) => {
         if(res.ok) return res.json();
@@ -18,7 +18,7 @@ export function unlike(id){
     return fetch(`${BASE_URL}likes/${id}`, {
         method: "DELETE",
         headers: {
-            Authoriziation: "Bearer" + tokenService.getToken()
+            Authorization: "Bearer " + tokenService.getToken()
         },
     }).then((res) => {
         if(res.ok) return res.json();

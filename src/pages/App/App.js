@@ -24,7 +24,7 @@ function App() {
   return (
       <Routes>
           <Route path='/' element={<Layout user={user} handleLogout={handleLogout}/>}>
-            <Route index element={<Feed />} />
+            <Route index element={<Feed user={user}/>} />
             <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
             
             <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />

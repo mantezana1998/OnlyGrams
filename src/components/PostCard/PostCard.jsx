@@ -10,10 +10,8 @@ function PostCard({
   }) {
 
   const likeIndex = post.likes.findIndex(
-    (eachLike) => eachLike.username === user.username
+    (eachLike) => eachLike.username === user?.username
   );
-
-  console.log(post, '<-----------')
 
   const likeColor = likeIndex > -1 ? "green" : "grey";
 
@@ -34,7 +32,9 @@ function PostCard({
                 size="large"
                 avatar
                 src={
-                  "https://react.semantic-ui.com/images/wireframe/square-image.png"
+                  post.user.photoUrl
+                    ? post.user.photoUrl
+                    : "https://react.semantic-ui.com/images/wireframe/square-image.png"
                 }
               />
               {post.user.username}

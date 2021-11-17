@@ -71,7 +71,7 @@ export default function ProfilePage(props) {
         <Grid.Column style={{ maxWidth: 750 }}>
           <PostFeed
             isProfile={true}
-            post={posts}
+            posts={posts}
             numPhotosCol={3}
             user={props.user}
 			like={like}

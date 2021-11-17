@@ -13,18 +13,22 @@ export default function Feed(props){
     const [loading, setLoading] = useState(true);
 
     async function handleAddPost(post){
-        console.log(post, '<- postsssssss')
+      try{
+        setLoading(true);
         const data = await postsApi.create(post);
-        console.log(data, '<- this is the data')
-        setPosts(posts => [data.post, ...posts])
+        setPosts([data.post, ...posts]);
+        setLoading(false);
+      }catch(err){
+        setError(err.message);
       }
+    }
     
-    async function getPosts(){
+    async function getPosts(showLoading){
         try{
+        showLoading ? setLoading(true) : setLoading(false)
             const data = await postsApi.getAll();
-            setPosts([
-                ...data.posts
-            ])
+            setPosts([...data.posts])
+            setLoading(false);
         }catch(err){
             setError(err.message);
             console.log(err, '<--- Error')

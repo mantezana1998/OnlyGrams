@@ -10,7 +10,7 @@ async function create(req, res){
         const post = await Post.findById(req.params.id);
         post.likes.push({username: req.user.username, userId: req.user._id})
         await post.save()
-        res.status(201).json({data: 'user liked'})
+        res.status(201).json({data: 'like added'})
     }catch(err){
         res.status(400).json({err})
     }
@@ -23,6 +23,6 @@ async function unlike(req, res){
         await post.save()
         res.json({data: 'user unliked'})
     }catch(err){
-
+        res.status(400).json({err})
     }
 }

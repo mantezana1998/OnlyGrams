@@ -4,13 +4,16 @@ import PostCard from "../PostCard/PostCard";
 
 export default function PostFeed({ 
   posts, 
+  numPhotosCol,
   user, 
   isProfile,
   like,
   unlike
-}) {
+})
+{
+  console.log(user, 'User in postfeed')
   return (
-    <Card.Group>
+    <Card.Group itemsPerRow={numPhotosCol}>
       <Segment>
         <Image src="https://react.semantic-ui.com/images/wireframe/short-paragraph.png" />
       </Segment>
