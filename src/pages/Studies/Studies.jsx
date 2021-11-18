@@ -18,15 +18,11 @@ function Studies(props){
     return (
         
         <Card.Group itemsPerRow={4}> 
-        {props.studies && props.studies.map((studies, i) => {
+        {props.data.map((data, i) => {
                 return(
                 <Card 
                 color={colorArray[i]} 
-                // image={studies.image}
-                header={studies.name}
-                // meta={studies.type}
-                description={studies.keyFindings}
-                // extra={studies.thc}
+                header={data.name}
                 />
             )})}
         </Card.Group> 

@@ -38,18 +38,18 @@ function App() {
       })
   }, [])
 
-  // useEffect(() => {
-  //   const studiesUrl = `https://api.otreeba.com/v1/studies/conditions?sort=updatedAt`
+  useEffect(() => {
+    const studiesUrl = `https://api.otreeba.com/v1/studies/conditions?sort=updatedAt`
 
-  //   fetch(studiesUrl)
-  //     .then((res) => res.json ())
-  //     .then(({studiesData}) => {
-  //       console.log(studiesData, '<-- this is studiesData from Otree')
-  //       setStudies(studiesData)
-  //     }).catch((err) => {
-  //       console.log(err, '<- ERROR ON APP.JS')
-  //     })
-  // }, [])
+    fetch(studiesUrl)
+      .then((res) => res.json ())
+      .then(({data}) => {
+        console.log(data, '<-- this is data from Otree')
+        setStudies(data)
+      }).catch((err) => {
+        console.log(err, '<- ERROR ON APP.JS')
+      })
+  }, [])
 
   return (
       <Routes>
@@ -60,7 +60,7 @@ function App() {
             <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
             <Route path='/:username' element={<ProfilePage />} />
             <Route path='/products' element={<Products data={product}/>} />
-            <Route path='/studies' element={<Studies studiesData={studies}/>} />
+            <Route path='/studies' element={<Studies data={studies}/>} />
           </Route>
       </Routes>
   );
