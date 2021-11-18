@@ -13,7 +13,6 @@ import Flowers from '../Flowers/Flowers';
 import Seeds from '../Seeds/Seeds';
 
 function App() {
-  console.log(userService)
   const [user, setUser] = useState(userService.getUser());
   const [product, setProduct] = useState([]);
   const [studies, setStudies] = useState([]);
@@ -30,31 +29,31 @@ function App() {
   }
 
   useEffect(() => {
-    const productUrl = `https://api.otreeba.com/v1/edibles?count=50&sort=updatedAt`
+    const productUrl = `https://api.otreeba.com/v1/edibles?count=10&sort=updatedAt`
 
     fetch(productUrl)
       .then((res) => res.json ())
       .then(({data}) => {
-        setProduct(data)
+        setProduct(data, 'lalalalalalalalalal')
       }).catch((err) => {
         console.log(err, '<- ERROR ON APP.JS')
       })
   }, [])
 
   useEffect(() => {
-    const studiesUrl = `https://api.otreeba.com/v1/studies/conditions?sort=updatedAt`
+    const studiesUrl = `https://api.otreeba.com/v1/studies/conditions?count=10&sort=updatedAt`
 
     fetch(studiesUrl)
       .then((res) => res.json ())
       .then(({data}) => {
-        setStudies(data)
+        setStudies(data,'---------')
       }).catch((err) => {
         console.log(err, '<- ERROR ON APP.JS')
       })
   }, [])
 
   useEffect(() =>{
-    const flowersUrl = `https://api.otreeba.com/v1/flowers?page=2&count=50&sort=createdAt`
+    const flowersUrl = `https://api.otreeba.com/v1/flowers?page=3&count=20&sort=createdAt`
 
     fetch(flowersUrl)
     .then((res) => res.json ())
@@ -66,7 +65,7 @@ function App() {
   }, [])
 
   useEffect(() =>{
-    const seedsUrl = `https://api.otreeba.com/v1/seed-companies?count=50&sort=createdAt`
+    const seedsUrl = `https://api.otreeba.com/v1/seed-companies?count=10&sort=createdAt`
 
     fetch(seedsUrl)
     .then((res) => res.json ())

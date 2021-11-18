@@ -1,4 +1,5 @@
 import React from 'react'
+import './Studies.css'
 import { Card, Icon, Divider, Container, Header, Button } from 'semantic-ui-react'
 
 const src = '/images/wireframe/white-image.png'
@@ -17,6 +18,7 @@ function Studies(props){
     'grey',]
     return (
     <>
+        <div class='Studies'>
         <Container text>
         <Header
         as='h1'
@@ -47,6 +49,7 @@ function Studies(props){
         <Icon name='right arrow' />
         </Button>
     </Container>
+    </div>
         <Divider />
             <Card.Group itemsPerRow={4}> 
             {props.data && props.data.map((data, i) => {

@@ -1,4 +1,5 @@
 import React from 'react'
+import './Flowers.css'
 import { Card, Icon, Header, Container, Button, Divider } from 'semantic-ui-react'
 
 const src = '/images/wireframe/white-image.png'
@@ -17,6 +18,7 @@ function Products(props){
     'grey',]
     return (
     <>
+        <div class='flowers'>
         <Container text>
         <Header
         as='h1'
@@ -27,8 +29,8 @@ function Products(props){
         style={{
             fontSize: '3em',
             fontWeight: 'normal',
-            marginBottom: '1em',
-            marginTop: '1em',
+            marginBottom: '3em',
+            marginTop: '0',
         }}
         />
         <Header
@@ -48,6 +50,7 @@ function Products(props){
         <Icon name='right arrow' />
         </Button>
     </Container>
+    </div>
         <Divider />
         <Card.Group itemsPerRow={4}> 
         {props.data && props.data.map((flower, i) => {
