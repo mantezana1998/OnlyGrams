@@ -5,41 +5,38 @@ import { Link } from 'react-router-dom';
 
 export default function PageHeader({user, handleLogout}){
 
-    const edibles = '/edibles'
+    const green = 'green'
 
     return (
       <Menu inverted>
-        <Link to='/'>
-            <Menu.Item>
-                <img src='https://i.imgur.com/x6cJekds.png' />
-            </Menu.Item>
-        </Link>
+        <Menu.Item href='/'>
+            <img src='https://i.imgur.com/x6cJekds.png' />
+        </Menu.Item>
 
-        <Link to='/'>
-            <Menu.Item name='OnlyGrams'  color='green'>
-                Home
-            </Menu.Item>
-        </Link>
+        <Menu.Item 
+        href='/'   
+        name='Home' 
+        color={green}
+        />
 
         <Dropdown item text='Cannabis Products'>
           <Dropdown.Menu>
-            <Link to={edibles}><Dropdown.Item>Edibles</Dropdown.Item></Link>
-            <Dropdown.Item>Medium</Dropdown.Item>
-            <Dropdown.Item>Large</Dropdown.Item>
+            <Dropdown.Item href='/edibles'>Edibles</Dropdown.Item>
+            <Dropdown.Item href='/flowers'>Flowers</Dropdown.Item>
+            <Dropdown.Item>Extracts</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
 
-        <Link to='/studies'>
-            <Menu.Item name='Studies'>
-                Studies
-            </Menu.Item>
-        </Link>
+        <Menu.Item 
+        href='/studies'  
+        name='Studies' 
+        />
 
-        <Link to='/login' onClick={handleLogout}>
-            <Menu.Item name='Logout'>
-                Logout
-            </Menu.Item>
-        </Link>
+        <Menu.Item 
+        href='/login'  
+        name='Logout' 
+        onClick={handleLogout}
+        />
 
         <Link to={`/${user.username}`}>
             <Menu.Item>

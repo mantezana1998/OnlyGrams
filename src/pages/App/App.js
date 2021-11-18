@@ -4,17 +4,21 @@ import './App.css';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService'
-import Layout from '../Layout/Layout'
-import Feed from '../Feed/Feed'
+import Layout from '../Layout/Layout';
+import Feed from '../Feed/Feed';
 import ProfilePage from "../ProfilePage/ProfilePage";
-import Edibles from '../Edibles/Edibles'
-import Studies from '../Studies/Studies'
+import Edibles from '../Edibles/Edibles';
+import Studies from '../Studies/Studies';
+import Flowers from '../Flowers/Flowers';
+import Seeds from '../Seeds/Seeds';
 
 function App() {
   console.log(userService)
   const [user, setUser] = useState(userService.getUser());
   const [product, setProduct] = useState([]);
   const [studies, setStudies] = useState([]);
+  const [flowers, setFlowers] = useState([]);
+  const [seeds, setSeeds] = useState([]);
 
   function handleSignUpOrLogin(){
     setUser(userService.getUser())
@@ -31,7 +35,6 @@ function App() {
     fetch(productUrl)
       .then((res) => res.json ())
       .then(({data}) => {
-        console.log(data, '<-- this is data from Otree')
         setProduct(data)
       }).catch((err) => {
         console.log(err, '<- ERROR ON APP.JS')
@@ -44,11 +47,35 @@ function App() {
     fetch(studiesUrl)
       .then((res) => res.json ())
       .then(({data}) => {
-        console.log(data, '<-- this is data from Otree')
         setStudies(data)
       }).catch((err) => {
         console.log(err, '<- ERROR ON APP.JS')
       })
+  }, [])
+
+  useEffect(() =>{
+    const flowersUrl = `https://api.otreeba.com/v1/flowers?page=2&count=50&sort=createdAt`
+
+    fetch(flowersUrl)
+    .then((res) => res.json ())
+    .then(({data}) => {
+      setFlowers(data)
+    }).catch((err) => {
+      console.log(err, 'Err on app.js')
+    })
+  }, [])
+
+  useEffect(() =>{
+    const seedsUrl = `https://api.otreeba.com/v1/seed-companies?count=50&sort=createdAt`
+
+    fetch(seedsUrl)
+    .then((res) => res.json ())
+    .then(({data}) => {
+      console.log(data, '<-this is the seeds data')
+      setSeeds(data)
+    }).catch((err) => {
+      console.log(err, 'Err on app.js')
+    })
   }, [])
 
   return (
@@ -61,6 +88,8 @@ function App() {
             <Route path='/:username' element={<ProfilePage />} />
             <Route path='/edibles' element={<Edibles data={product}/>} />
             <Route path='/studies' element={<Studies data={studies}/>} />
+            <Route path='/flowers' element={<Flowers data={flowers} />} /> 
+            <Route path='/seeds' element={<Seeds data={seeds} />} /> 
           </Route>
       </Routes>
   );
