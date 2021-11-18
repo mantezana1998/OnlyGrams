@@ -23,7 +23,7 @@ export default function PageHeader({user, handleLogout}){
           <Dropdown.Menu>
             <Dropdown.Item href='/edibles'>Edibles</Dropdown.Item>
             <Dropdown.Item href='/flowers'>Flowers</Dropdown.Item>
-            <Dropdown.Item>Extracts</Dropdown.Item>
+            <Dropdown.Item href='/seeds'>Seeds</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
 

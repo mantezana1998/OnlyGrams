@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, Icon, Image, Grid } from 'semantic-ui-react'
+import './Edibles.css';
+import { Card, Icon, Container, Header, Button, Divider } from 'semantic-ui-react'
 
 const src = '/images/wireframe/white-image.png'
 
@@ -16,7 +17,40 @@ function Products(props){
     'brown', 
     'grey',]
     return (
-        
+    <>
+        <div class='edible'>
+        <Container text >
+        <Header
+        as='h1'
+        color='green'
+        content='Edibles'
+        inverted
+        style={{
+            fontSize: '3em',
+            fontWeight: 'normal',
+            marginBottom: '1em',
+            marginTop: '1em',
+        }}
+        />
+        <Header
+        as='h2'
+        color='green'
+        content='Bake the world a better place.'
+        inverted
+        style={{
+            fontSize: '1.7em',
+            fontWeight: 'normal',
+            marginTop: '1.5em',
+            marginBottom: '1em'
+        }}
+        />
+        <Button primary size='huge' href='https://ediblesmagazine.com/tag/420-recipes/'>
+        420 Recipies Here
+        <Icon name='right arrow' />
+        </Button>
+    </Container>
+    </div>
+        <Divider />
         <Card.Group itemsPerRow={4}> 
         {props.data && props.data.map((product, i) => {
                 return(
@@ -30,7 +64,7 @@ function Products(props){
                 />
             )})}
         </Card.Group> 
-    
+    </>
     )
 }
 export default Products
