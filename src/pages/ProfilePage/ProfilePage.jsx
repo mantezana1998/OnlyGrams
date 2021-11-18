@@ -56,9 +56,9 @@ export default function ProfilePage(props) {
     return <ErrorMessage error={error} />;
   }
 
-  if (loading) {
-    return <Loading />;
-  }
+  // if (loading) {
+  //   return <Loading loading={loading}/>;
+  // }
 
   return (
     <Grid centered>

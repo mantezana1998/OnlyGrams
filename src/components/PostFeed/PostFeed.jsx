@@ -11,7 +11,6 @@ export default function PostFeed({
   unlike
 })
 {
-  console.log(user, 'User in postfeed')
   return (
     <Card.Group itemsPerRow={numPhotosCol}>
       <Segment>
