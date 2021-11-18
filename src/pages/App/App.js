@@ -7,7 +7,7 @@ import userService from '../../utils/userService'
 import Layout from '../Layout/Layout'
 import Feed from '../Feed/Feed'
 import ProfilePage from "../ProfilePage/ProfilePage";
-import Products from '../Products/Products'
+import Edibles from '../Edibles/Edibles'
 import Studies from '../Studies/Studies'
 
 function App() {
@@ -59,7 +59,7 @@ function App() {
             
             <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
             <Route path='/:username' element={<ProfilePage />} />
-            <Route path='/products' element={<Products data={product}/>} />
+            <Route path='/edibles' element={<Edibles data={product}/>} />
             <Route path='/studies' element={<Studies data={studies}/>} />
           </Route>
       </Routes>
