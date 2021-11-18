@@ -40,6 +40,7 @@ export default function PageHeader({user, handleLogout}){
                 Logout
             </Menu.Item>
         </Link>
+
         <Link to={`/${user.username}`}>
             <Menu.Item>
                 <Image src={user.photoUrl ? user.photoUrl : "https://react.semantic-ui.com/images/wireframe/square-image.png"} avatar/>
