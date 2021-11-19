@@ -27,22 +27,10 @@ function Products(props){
         textAlign='center'
         inverted
         style={{
-            fontSize: '3em',
+            fontSize: '7em',
             fontWeight: 'normal',
             marginBottom: '3em',
             marginTop: '0',
-        }}
-        />
-        <Header
-        as='h2'
-        color='green'
-        content='"Cannabis is the single most versatile herbal remedy, and the most useful plant on Earth. No other single plant contains as wide a range of medically active herbal constituents."'
-        inverted
-        style={{
-            fontSize: '1.7em',
-            fontWeight: 'normal',
-            marginTop: '1.5em',
-            marginBottom: '1em'
         }}
         />
         <Button primary size='huge' href='https://disa.com/map-of-marijuana-legality-by-state'>

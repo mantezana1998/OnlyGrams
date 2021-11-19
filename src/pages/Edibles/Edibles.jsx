@@ -26,10 +26,9 @@ function Products(props){
         content='Edibles'
         inverted
         style={{
-            fontSize: '3em',
+            fontSize: '7em',
             fontWeight: 'normal',
             marginBottom: '1em',
-            marginTop: '1em',
         }}
         />
         <Header
@@ -38,9 +37,9 @@ function Products(props){
         content='Bake the world a better place.'
         inverted
         style={{
-            fontSize: '1.7em',
+            fontSize: '3em',
             fontWeight: 'normal',
-            marginTop: '1.5em',
+            marginTop: '1em',
             marginBottom: '1em'
         }}
         />

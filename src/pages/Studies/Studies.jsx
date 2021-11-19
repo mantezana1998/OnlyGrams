@@ -24,24 +24,10 @@ function Studies(props){
         as='h1'
         color='green'
         content='Marijuana Scientific Studies'
-        inverted
         style={{
-            fontSize: '3em',
+            fontSize: '5em',
             fontWeight: 'normal',
             marginBottom: '1em',
-            marginTop: '1em',
-        }}
-        />
-        <Header
-        as='h2'
-        color='green'
-        content='"Marijuana is quite possibly the finest of intoxicants. It has been scientifically proven, for decades, to be much less harmful to the body than alcohol when used on a regular basis."'
-        inverted
-        style={{
-            fontSize: '1.7em',
-            fontWeight: 'normal',
-            marginTop: '1.5em',
-            marginBottom: '1em'
         }}
         />
         <Button primary size='huge' href='https://disa.com/map-of-marijuana-legality-by-state'>

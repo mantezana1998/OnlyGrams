@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.ui.green.header{
+  color: green!important;
+  background-color:black;
+  opacity: 0.6;
+}
+
+.ui.primary.button {
+  background-color: green;
+}

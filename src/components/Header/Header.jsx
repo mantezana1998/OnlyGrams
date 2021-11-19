@@ -1,7 +1,5 @@
 import React from 'react';
 import { Menu, Image, Dropdown } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-
 
 export default function PageHeader({user, handleLogout}){
 
@@ -43,50 +41,3 @@ export default function PageHeader({user, handleLogout}){
       </Menu>
     )
   }
-
-// if(user){
-//     return (
-//         <Segment inverted>
-//             <Header>
-//                 <Header as='h2' textAlign='right'>
-//                     <Button inverted color='green'>
-//                         <Link to='/login' onClick={handleLogout}>
-//                             Logout
-//                         </Link>
-//                     </Button>
-//                 </Header>
-
-//                 <Header as='h1' textAlign='center'>
-//                     <Button inverted color='green'>
-//                         <Link to='/'/>
-//                             OnlyGrams
-//                     </Button>
-//                 </Header>
-
-//                 <Header as='h2' textAlign='right'>
-//                     <Button inverted color='green'>
-//                         <Link to='/products'>
-//                             Products
-//                         </Link>
-//                     </Button>
-//                 </Header>
-
-//                 <Button inverted color='green'>
-//                     <Link to='/studies'>
-//                         Studies
-//                     </Link>
-//                 </Button>
-//             </Header>
-//             <Header as='h2' floated='left'>
-//                 <Link to={`/${user.username}`}>
-//                     <Image src={user.photoUrl ? user.photoUrl : "https://react.semantic-ui.com/images/wireframe/square-image.png"} avatar/>
-//                 </Link>          
-//             </Header>
-//         </Segment>
-//     )
-// }
-
-// return (
-//     <div></div>
-// )
-

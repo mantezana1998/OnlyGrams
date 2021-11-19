@@ -47,7 +47,7 @@ function PostCard({
         <Card.Description>{post.caption}</Card.Description>
       </Card.Content>
       <Card.Content extra textAlign={"right"}>
-        <Icon name={"heart"} size="large" color={likeColor} onClick={clickHandler}/>
+        <Icon name={"leaf"} size="large" color={likeColor} onClick={clickHandler}/>
         {post.likes.length} Likes
       </Card.Content>
     </Card>
