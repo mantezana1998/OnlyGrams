@@ -19,7 +19,7 @@ function PostCard({
     likeIndex > -1
       ? () => unlike(post.likes[likeIndex]._id)
       : () => like(post._id);
-
+      console.log(user.username, '<-----Username from postcard')
   return (
     <Card key={post._id} raised>
       {isProfile ? (
@@ -32,12 +32,12 @@ function PostCard({
                 size="large"
                 avatar
                 src={
-                  post.user.photoUrl
-                    ? post.user.photoUrl
-                    : "https://react.semantic-ui.com/images/wireframe/square-image.png"
+                  post.user?.photoUrl
+                    ? post.user?.photoUrl
+                    : "https://i.imgur.com/fX4C4QR.jpg"
                 }
               />
-              {post.user.username}
+              {post.user?.username}
             </Link>
           </Card.Header>
         </Card.Content>

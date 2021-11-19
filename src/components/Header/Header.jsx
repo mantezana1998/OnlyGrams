@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 export default function PageHeader({user, handleLogout}){
 
     const green = 'green'
-
     return (
       <Menu inverted>
         <Menu.Item href='/'>
@@ -38,15 +37,12 @@ export default function PageHeader({user, handleLogout}){
         onClick={handleLogout}
         />
 
-        <Link to={`/${user.username}`}>
-            <Menu.Item>
-                <Image src={user.photoUrl ? user.photoUrl : "https://react.semantic-ui.com/images/wireframe/square-image.png"} avatar/>
-            </Menu.Item>
-         </Link> 
+        {user && <Menu.Item href={`/${user.username}`}>
+            <Image src={user.photoUrl ? user.photoUrl : "https://react.semantic-ui.com/images/wireframe/square-image.png"} avatar/>
+        </Menu.Item>}
       </Menu>
     )
   }
-
 
 // if(user){
 //     return (
