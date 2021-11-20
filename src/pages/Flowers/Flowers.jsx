@@ -18,19 +18,18 @@ function Products(props){
     'grey',]
     return (
     <>
-        <div class='flowers'>
+        <div className='flowers' >
         <Container text>
         <Header
+        className='header'
         as='h1'
         color='green'
         content='Flowers'
-        textAlign='center'
         inverted
         style={{
-            fontSize: '7em',
+            fontSize: '5em',
             fontWeight: 'normal',
-            marginBottom: '3em',
-            marginTop: '0',
+            marginBottom: '1em',
         }}
         />
         <Button primary size='huge' href='https://disa.com/map-of-marijuana-legality-by-state'>

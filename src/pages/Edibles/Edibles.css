@@ -1,4 +1,5 @@
 .edible{
-    background-image: url('https://i.imgur.com/o85yi1fs.jpg');
-    height: 53vh;
+    background: url('https://i.imgur.com/o85yi1fs.jpg'); 
+    height: 75vh;
+    background-color: red;
 }

@@ -19,7 +19,6 @@ function PostCard({
     likeIndex > -1
       ? () => unlike(post.likes[likeIndex]._id)
       : () => like(post._id);
-      console.log(user.username, '<-----Username from postcard')
   return (
     <Card key={post._id} raised>
       {isProfile ? (

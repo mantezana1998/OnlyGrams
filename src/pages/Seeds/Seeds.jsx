@@ -26,7 +26,7 @@ function Products(props){
         content='Seeds'
         inverted
         style={{
-            fontSize: '7em',
+            fontSize: '5em',
             fontWeight: 'normal',
             marginBottom: '1em',
         }}
