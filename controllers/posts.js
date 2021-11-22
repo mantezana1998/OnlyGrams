@@ -13,10 +13,8 @@ module.exports = {
 function create(req, res) {
     console.log(req.body, req.file, req.user);
   
-    //Upload the file to AWS
     const filePath = `${uuidv4()}/${req.file.originalname}`;
     const params = { Bucket: BUCKET_NAME, Key: filePath, Body: req.file.buffer };
-    // exactly like signup we did yesterday, so look at the signup function
     s3.upload(params, async function (err, data) {
       console.log(err, " < - error from aws in the post create");
   
@@ -32,11 +30,6 @@ function create(req, res) {
         res.status(400).json({ err });
       }
     });
-  
-    // after you upload the photo, you'll want to create a Post,
-    // make sure you refer to the Post model to see what properties the schema needs
-  
-    // respond back to the client with the create post
   }
 
   async function index(req, res){

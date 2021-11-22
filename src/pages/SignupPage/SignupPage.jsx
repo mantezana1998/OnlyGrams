@@ -19,8 +19,8 @@ const [state, setState] = useState({
 });
 
   function handleChange(e){
-    const name = e.target.name
-    const value = e.target.value
+    const name = e.target.name;
+    const value = e.target.value;
     setState({
       ...state,
       [name]: value
@@ -106,7 +106,7 @@ const [state, setState] = useState({
               <Button
                 type="submit"
                 className="btn"
-              >
+                >
                 Signup
               </Button>
             </Segment>

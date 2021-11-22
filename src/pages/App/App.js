@@ -34,7 +34,7 @@ function App() {
   //   fetch(productUrl)
   //     .then((res) => res.json ())
   //     .then(({data}) => {
-  //       setProduct(data, 'lalalalalalalalalal')
+  //       setProduct(data)
   //     }).catch((err) => {
   //       console.log(err, '<- ERROR ON APP.JS')
   //     })
@@ -46,7 +46,7 @@ function App() {
   //   fetch(studiesUrl)
   //     .then((res) => res.json ())
   //     .then(({data}) => {
-  //       setStudies(data,'---------')
+  //       setStudies(data)
   //     }).catch((err) => {
   //       console.log(err, '<- ERROR ON APP.JS')
   //     })
@@ -70,7 +70,6 @@ function App() {
   //   fetch(seedsUrl)
   //   .then((res) => res.json ())
   //   .then(({data}) => {
-  //     console.log(data, '<-this is the seeds data')
   //     setSeeds(data)
   //   }).catch((err) => {
   //     console.log(err, 'Err on app.js')

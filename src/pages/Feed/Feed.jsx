@@ -3,7 +3,6 @@ import PostForm from '../../components/PostForm/PostForm';
 import PostFeed from '../../components/PostFeed/PostFeed';
 import * as postsApi from '../../utils/postApi'
 import * as likesApi from '../../utils/likesApi'
-
 import { Grid } from "semantic-ui-react";
 
 export default function Feed(props){  

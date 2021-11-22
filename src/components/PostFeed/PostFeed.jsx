@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Loader, Dimmer, Segment, Image } from "semantic-ui-react";
+import { Card, Segment, Image } from "semantic-ui-react";
 import PostCard from "../PostCard/PostCard";
 
 export default function PostFeed({ 

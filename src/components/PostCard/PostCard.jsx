@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+
 function PostCard({ 
   post, 
   isProfile, 
@@ -43,7 +44,9 @@ function PostCard({
       )}
       <Image src={`${post.photoUrl}`} wrapped ui={false} />
       <Card.Content>
-        <Card.Description>{post.caption}</Card.Description>
+        <Card.Description>
+          {post.caption}
+        </Card.Description>
       </Card.Content>
       <Card.Content extra textAlign={"right"}>
         <Icon name={"leaf"} size="large" color={likeColor} onClick={clickHandler}/>

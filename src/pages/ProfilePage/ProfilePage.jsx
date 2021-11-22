@@ -33,7 +33,6 @@ export default function ProfilePage(props) {
   async function like(postId) {
     try {
       const data = await likesApi.create(postId);
-      console.log(data, " <- this is data the response from likes create");
       getProfile();
     } catch (err) {
       console.log(err);
@@ -44,7 +43,6 @@ export default function ProfilePage(props) {
   async function unlike(likesId) {
     try {
       const data = await likesApi.unlike(likesId);
-      console.log(data, " <- this is data the response from likes delete");
       getProfile(false);
     } catch (err) {
       console.log(err);
