@@ -4,10 +4,11 @@ SCREENSHOTS GO HERE
 
 **Technologies User**: HTML, CSS, JavaScript, Mongoose, Express, React, Node.js, and AWS
 
-Checkout OnlyGrams [here](google.com)
+Checkout [OnlyGrams](google.com)
 
 [Trello Board](github.com)
 
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
+- [ ] Cannabis leaf as like button
+- [ ] Notify user when someone likes their post
+- [ ] Give user the ability to post videos
+- [ ] Give user the ability to add products to their profile page  
