@@ -6,7 +6,7 @@ SCREENSHOTS GO HERE
 
 Checkout [OnlyGrams](google.com)
 
-[Trello Board](github.com)
+[Trello Board](https://trello.com/b/UHFOQtGC/only-grams)
 
 - [ ] Cannabis leaf as like button
 - [ ] Notify user when someone likes their post
