@@ -37,7 +37,9 @@
   }
 }
 
-
+.ui.centered.header {
+  text-align: center;
+}
 
 @media only screen and (min-width: 1400px){
 .ui.green.header{
@@ -85,8 +87,4 @@
     background-color: green;
     transform: translateX(0px) translatey(826px);
     }
-}
-
-.column .row{
-  background-color: green;
 }
