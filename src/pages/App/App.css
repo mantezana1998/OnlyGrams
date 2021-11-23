@@ -37,10 +37,6 @@
   }
 }
 
-.ui.centered.header {
-  text-align: center;
-}
-
 @media only screen and (min-width: 1400px){
 .ui.green.header{
   color: green!important;
