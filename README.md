@@ -6,7 +6,7 @@ SCREENSHOTS GO HERE
 
 **Technologies User**: HTML, CSS, JavaScript, Mongoose, Express, React, Node.js, and AWS.
 
-Checkout [OnlyGrams](google.com)
+Checkout [OnlyGrams](https://github.com/mantezana1998/OnlyGrams)
 
 [Trello Board](https://trello.com/b/UHFOQtGC/only-grams)
 
