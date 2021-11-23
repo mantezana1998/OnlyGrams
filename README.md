@@ -9,7 +9,7 @@ OnlyGrams is a social media network for people 65 an older who are new to cannab
 
 **Technologies User**: HTML, CSS, JavaScript, Mongoose, Express, React, Node.js, and AWS.
 
-Checkout [OnlyGrams](https://onlygrams.herokuapp.com/)
+Checkout [OnlyGrams](https://onlygrams.herokuapp.com/signup)
 
 [Trello Board](https://trello.com/b/UHFOQtGC/only-grams)
 
