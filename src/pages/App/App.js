@@ -75,7 +75,7 @@ function App() {
   //     console.log(err, 'Err on app.js')
   //   })
   // }, [])
-
+  if (user) {
   return (
       <Routes>
           <Route path='/' element={<Layout user={user} handleLogout={handleLogout}/>}>
@@ -91,6 +91,15 @@ function App() {
           </Route>
       </Routes>
   );
+  }
+
+  return (
+    <Routes>
+      <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
+      
+      <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>} />
+    </Routes>
+  )
 }
 
 export default App;
