@@ -40,29 +40,29 @@ function App() {
   //     })
   // }, [])
 
-  // useEffect(() => {
-  //   const studiesUrl = `https://api.otreeba.com/v1/studies/conditions?count=10&sort=updatedAt`
+  useEffect(() => {
+    const studiesUrl = `https://api.otreeba.com/v1/studies/conditions?count=10&sort=updatedAt`
 
-  //   fetch(studiesUrl)
-  //     .then((res) => res.json ())
-  //     .then(({data}) => {
-  //       setStudies(data)
-  //     }).catch((err) => {
-  //       console.log(err, '<- ERROR ON APP.JS')
-  //     })
-  // }, [])
+    fetch(studiesUrl)
+      .then((res) => res.json ())
+      .then(({data}) => {
+        setStudies(data)
+      }).catch((err) => {
+        console.log(err, '<- ERROR ON APP.JS')
+      })
+  }, [])
 
-  // useEffect(() =>{
-  //   const flowersUrl = `https://api.otreeba.com/v1/flowers?page=3&count=20&sort=createdAt`
+  useEffect(() =>{
+    const flowersUrl = `https://api.otreeba.com/v1/flowers?page=1&count=10&sort=createdAt`
 
-  //   fetch(flowersUrl)
-  //   .then((res) => res.json ())
-  //   .then(({data}) => {
-  //     setFlowers(data)
-  //   }).catch((err) => {
-  //     console.log(err, 'Err on app.js')
-  //   })
-  // }, [])
+    fetch(flowersUrl)
+    .then((res) => res.json ())
+    .then(({data}) => {
+      setFlowers(data)
+    }).catch((err) => {
+      console.log(err, 'Err on app.js')
+    })
+  }, [])
 
   // useEffect(() =>{
   //   const seedsUrl = `https://api.otreeba.com/v1/seed-companies?count=10&sort=createdAt`
