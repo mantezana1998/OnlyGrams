@@ -2,11 +2,14 @@
 
 OnlyGrams is a social media network for people 65 an older who are new to cannabis. Cannabis use in older Americans have spiked 75% in just three years, according to JAMA Internal Medicine.  
 
-SCREENSHOTS GO HERE 
+!(https://i.imgur.com/0J8cTjy.png)
+!(https://i.imgur.com/S0WhlZK.png)
+!(https://i.imgur.com/G9ak538.png)
+!(https://i.imgur.com/pg0QYyG.png)
 
 **Technologies User**: HTML, CSS, JavaScript, Mongoose, Express, React, Node.js, and AWS.
 
-Checkout [OnlyGrams](https://github.com/mantezana1998/OnlyGrams)
+Checkout [OnlyGrams](https://onlygrams.herokuapp.com/)
 
 [Trello Board](https://trello.com/b/UHFOQtGC/only-grams)
 
